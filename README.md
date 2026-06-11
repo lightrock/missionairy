@@ -10,6 +10,12 @@ The same coordination required for human mission teams is required for heterogen
 
 As in prior eras of rapid industrial mobilization, the limiting factor is not invention alone. The nation needs disciplined processes for understanding, validating, updating, and fielding new capabilities at operational speed.
 
+## Critical Infrastructure and HAM/RACES
+
+MissionAiry also applies to critical infrastructure, emergency communications, and HAM/RACES-style resilience networks. These environments face the same core problem: rapidly changing capabilities, fragile communications, distributed human expertise, local improvisation, and the need to preserve intent, trust, and coordination under stress.
+
+HAM radio and Radio Amateur Civil Emergency Service (RACES) communities are not an afterthought. Amateur radio has repeatedly produced serious technical innovation: amateur-built satellites, global ground-station coordination, packet radio networks, emergency communications practice, and direct radio links with human spaceflight. MissionAiry treats that practical ecosystem as part of the same architecture problem: helping authorities, operators, autonomous systems, and resilient human networks coordinate capabilities when normal infrastructure cannot be assumed.
+
 ## Cognitive Map
 
 Why centralized command breaks down when the mission ecosystem itself is rapidly changing.  
