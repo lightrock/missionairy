@@ -17,13 +17,9 @@ Historically, rapid industrial emergence has required more than invention. Durin
 
 
 
-## More about the idea 
+## How to interact with this github repository
 
 Before the AI codes, teach the repo how to talk. Before the AI claims done, define what done means. Before the AI recommends, separate evidence from conclusion. Before the AI patches, define authority, verification, and boundary rules.
-
-Can we define the repo-native standards that Cursor, Codex, Claude Code, Copilot... and GitHub bots should obey?
-
-Can we make it easy to tailor for your specific needs?
 
 ## Working on it / TODO / TO FINISH
 
@@ -38,7 +34,7 @@ See [TODO.md](TODO.md) for the rough working list of what still needs to become 
 - [Português do Brasil](docs/i18n/README.pt-BR.md)
 - [हिन्दी](docs/i18n/README.hi.md)
 
-## What this is
+## What this repository is
 
 It is a repo-native discipline layer for using AI assistants and coding agents without losing intent, constraints, checks, or project history.
 
