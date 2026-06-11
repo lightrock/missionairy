@@ -29,11 +29,7 @@ See [architecture_reasoning.md](docs/architecture_reasoning.md).
 What is going on in the world in this regard
 See [current_landscape.md](docs/current_landscape.md).
 
-```
-
-
-```
-
+---
 
 
 
