@@ -2,19 +2,9 @@ For the public introduction, see the [Doctor Bones GitHub Pages site](https://li
 
 # MissionAiry
 
-This is an instance of a Doctor Bones github project template designed for use with Rapid AI Development. 
+This is an instance of a Doctor Bones github project template designed for use with Rapid AI Development. Doctor Bones is a vendor-independent repository template for AI-assisted development.
 
 MissionAiry is a common mission operating environment for rapidly understanding, integrating, validating, updating, and redeploying newly emerged AI/autonomy capabilities while keeping the forward mission surfaces human-comprehensible.
-
-Doctor Bones is a vendor-independent repository template for AI-assisted development.
-
-It helps you keep project memory inside the repo instead of trapped in chat. It gives your human/AI team a shared operating discipline: workorders, playbooks, examples, checks, handoff rules, and release-readiness habits.
-
-The idea is, whenever you start a new project, start with a Doctor Bones.
-
-You do not necessarily have to fetch your copy of this template to your local PC or agent environment to use it. Doctor Bones carries its cognitive architecture in the repository itself. If you follow the startup instructions below, your foreground AI should have enough project smarts to reason from the repo guidance, examples, playbooks, checks, and handoff rules.
-
-By default, nothing has to "run" anywhere in the traditional way, and you do not necessarily have to invoke an executor such as Codex. Point your foreground AI at the appropriate Doctor Bones-based repository instance first. Use an executor only when the task needs file edits, a runtime environment, checks, commits, or pull requests.
 
 ## More about the idea 
 
