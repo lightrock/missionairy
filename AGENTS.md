@@ -108,10 +108,14 @@ Read the smallest relevant surface before acting:
 | Conceptual framing and command model | `docs/cognitive_map.md` |
 | Current strategic/industrial landscape | `docs/current_landscape.md` |
 | Current task list | `TODO.md` |
+| Foreground/executor operating discipline, start-new-tab behavior, break words | `docs/agent-operating-model.md` |
+| Source/project boundary and external repository safety | `docs/repo-boundaries.md` |
+| PFEM-lite, PFCOMM-lite, and architecture lens discipline | `docs/architecture-lenses.md` |
+| Repo maintenance, README discipline, pull requests, merge conflicts, checks | `docs/repo-maintenance.md` |
+| Day-in-the-life examples and teaching patterns | `examples/TRIGGER_MAP.md`, `examples/README.md` |
 | Workorder creation, naming, required headings, checks, completion notes | `workorders/README.md`, `workorders/TEMPLATE.md`, `schemas/workorder-contract.json` |
 | Playbook creation or execution | `playbooks/README.md` and the relevant `playbooks/<workflow-name>/PLAYBOOK.md` |
 | Lessons learned rules | `lessons-learned/README.md` |
-| Repo maintenance, merge conflicts, folder hierarchy, checks | `docs/repo-maintenance.md` |
 
 Before using any example as a pattern, preserve this distinction:
 
