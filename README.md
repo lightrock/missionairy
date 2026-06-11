@@ -14,6 +14,8 @@ The challenge is larger than managing autonomous agents or teaching them to mana
 
 The same coordination required for human mission teams is required for heterogeneous autonomous agents. A commander, operator, AI assistant, robotic platform, sensor, semi-independent field asset, and swarm element can all be understood as mission participants with different capabilities, constraints, authorities, and update cycles. MissionAiry supports the command-and-control functions needed across that full spectrum: aligning intent, assigning roles, sharing context, validating action, managing change, and preserving accountability.
 
+MissionAiry adapters are capability adapters, not just API adapters. They expose what an AI or autonomous agent can do, what it is allowed to do, how it communicates, how it is validated, how it updates, and how authorities and operators can understand its role in the mission.
+
 Defensive missions cannot be reduced to missile systems, laser stations, jammers, or fixed counter-drone appliances. As autonomous systems become cheaper, faster, and more numerous, defense itself becomes a drone-on-drone and agent-on-agent coordination problem across land, air, sea, cyber, communications, and critical infrastructure. The challenge is not only to intercept hostile systems, but to coordinate defensive sensors, autonomous patrols, human observers, emergency communications, authorities, and updateable mission rules fast enough to preserve continuity and trust.
 
 As in prior eras of rapid industrial mobilization, the limiting factor is not invention alone. The nation needs disciplined processes for understanding, validating, updating, and fielding new capabilities at operational speed.
