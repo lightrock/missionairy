@@ -2852,8 +2852,4 @@ logs/evidence → report
 operator question → query over mission state
 ```
 
-For the DICE/PF pitch, the clean line is:
 
-```text
-We are not proposing a swarm of LLMs. We are proposing a federated autonomy architecture that can coordinate existing university-grade drone AI components: perception, state estimation, planning, control, swarm coordination, sustainment, reconstitution, and operator interaction.
-```
