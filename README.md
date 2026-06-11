@@ -56,6 +56,10 @@ See [architecture_reasoning.md](docs/architecture_reasoning.md).
 Why rapid AI/autonomy industrialization changes the mission problem before the mission even begins.  
 See [current_landscape.md](docs/current_landscape.md).
 
+## Continual Process Improvement = "Controlled Emergence"
+
+Starts at the industry, continues to the deployment of missions
+
 ---
 
 ## Repository Discipline
