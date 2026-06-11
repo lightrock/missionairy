@@ -34,7 +34,7 @@ Imagine an operational set of AI's engaged in performance of a mission and along
 
 # MissionAiry Architecture Reasoning
 
-See [current_landscape.md](docs/architecture_reasoning.md).
+See [architecture_reasoning.md](docs/architecture_reasoning.md).
 
 
 
