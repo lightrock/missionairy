@@ -8,15 +8,15 @@ The goal is rapid adaptability without operational confusion. MissionAiry gives 
 
 The challenge is larger than managing autonomous agents or teaching them to manage themselves. Under rapid AI emergence, the whole mission infrastructure becomes part of the problem: sensors, platforms, communications, data flows, validation, logistics, authorities, safety boundaries, and human decision surfaces. MissionAiry treats these as one living mission system.
 
-The same coordination required for human mission teams starting at the very top, is required for heterogeneous autonomous agents. A commander, operator, a semi-independent AI assistant, a robotic platform, and a swarm element can all be understood as mission participants with different capabilities, constraints, authorities, and update cycles. MissionAiry supports the command-and-control functions needed across that full spectrum: aligning intent, assigning roles, sharing context, validating action, managing change, and preserving accountability.
+The same coordination required for human mission teams is required for heterogeneous autonomous agents. A commander, operator, AI assistant, robotic platform, sensor, semi-independent field asset, and swarm element can all be understood as mission participants with different capabilities, constraints, authorities, and update cycles. MissionAiry supports the command-and-control functions needed across that full spectrum: aligning intent, assigning roles, sharing context, validating action, managing change, and preserving accountability.
 
 As in prior eras of rapid industrial mobilization, the limiting factor is not invention alone. The nation needs disciplined processes for understanding, validating, updating, and fielding new capabilities at operational speed.
 
 # Cognitive Map
 
-Think of the book or movie Ender's Game. One commander in a centralized enviornment, supported by a team of geniuses, guides an offensive against a rapidly adapting enemy.
+Think of the book or movie Ender's Game. One commander in a centralized environment, supported by a team of geniuses, guides an offensive against a rapidly adapting enemy.
 
-Think of the history of war, there is a heirarchical structure of military command.
+Think of the history of war, there is a hierarchical structure of military command.
 
 ## This is not right in the modern world
 
@@ -51,10 +51,6 @@ The same thing as PFEM inverts to "Polycentric Federated Command Mesh" with the 
 
 # Existing Landscape
 ( link to PFS.md )
-
-
-
-
 
 
 
