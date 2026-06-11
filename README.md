@@ -12,24 +12,27 @@ The same coordination required for human mission teams is required for heterogen
 
 As in prior eras of rapid industrial mobilization, the limiting factor is not invention alone. The nation needs disciplined processes for understanding, validating, updating, and fielding new capabilities at operational speed.
 
-# Cognitive Map
+## Cognitive Map
 
 How we think about all this
 See [cognitive_map.md](docs/cognitive_map.md).
 
 
-# MissionAiry Architecture Reasoning
+## MissionAiry Architecture Reasoning
 
 How we think about the architecture(s)
 See [architecture_reasoning.md](docs/architecture_reasoning.md).
 
 
-# Current Landscape
+## Current Landscape
 
 What is going on in the world in this regard
 See [current_landscape.md](docs/current_landscape.md).
 
+```
 
+
+```
 
 
 
