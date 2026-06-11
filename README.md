@@ -58,7 +58,7 @@ See [current_landscape.md](docs/current_landscape.md).
 
 ## Continual Process Improvement = "Controlled Emergence"
 
-Starts at the industry, continues to the deployment of missions
+Starts at the industrial mobilization, and continues to the deployment and operation of missions
 
 ---
 
