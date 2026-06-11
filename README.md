@@ -1,5 +1,3 @@
-For the public introduction, see the [Doctor Bones GitHub Pages site](https://lightrock.github.io/drbones/).
-
 # MissionAiry
 
 MissionAiry is a common mission operating environment for rapidly integrating, validating, updating, and redeploying emerging AI and autonomy capabilities while keeping mission surfaces human-comprehensible for authorities and operators.
