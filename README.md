@@ -2,19 +2,13 @@ For the public introduction, see the [Doctor Bones GitHub Pages site](https://li
 
 # MissionAiry
 
-MissionAiry is a common mission operating environment for rapidly understanding, integrating, validating, updating, and redeploying emerging AI and autonomy capabilities while keeping forward mission surfaces human-comprehensible for authorities and operators.
+MissionAiry is a common mission operating environment for rapidly integrating, validating, updating, and redeploying emerging AI and autonomy capabilities while keeping mission surfaces human-comprehensible for authorities and operators.
 
-Its purpose is rapid mission adaptability. MissionAiry gives authorities and operators a familiar, mission-sensible environment where new and existing capabilities can be assessed, coordinated, trusted, updated, and redeployed as conditions change, while keeping deployed missions coherent and aligned with commander intent.
+The goal is rapid adaptability without operational confusion. MissionAiry gives authorities and operators a familiar environment for assessing new capabilities, coordinating them with existing systems, and redeploying them as conditions change while preserving mission intent, accountability, and coherence.
 
-This problem is larger than preventing autonomous systems from running amok. In a rapidly emerging AI mission environment, the entire mission infrastructure becomes part of the adaptation challenge: sensors, platforms, communications, data flows, validation methods, logistics, authorities, safety boundaries, update mechanisms, and human decision surfaces. MissionAiry treats these as one living mission system, so new capabilities can be absorbed without losing operational sense, accountability, or coherence.
+The challenge is larger than managing autonomous agents. Under rapid AI emergence, the whole mission infrastructure becomes part of the problem: sensors, platforms, communications, data flows, validation, logistics, authorities, safety boundaries, and human decision surfaces. MissionAiry treats these as one living mission system.
 
-There are many points along the path to deployment where a mission can fail before an AI agent ever reaches the field. A capability may be promising but poorly understood, integrated but not validated, validated but not authorized, authorized but not explainable, or deployed without a clear way to update it when conditions change. MissionAiry is designed to make those failure points visible and manageable.
-
-Historically, rapid industrial emergence has required more than invention. During World War II, figures such as W. Edwards Deming helped show that national-scale production depended on repeatable processes, quality control, measurement, and feedback loops, not just heroic engineering. MissionAiry applies that lesson to the AI/autonomy era: the nation does not merely need more autonomous tools; it needs a disciplined mission environment for understanding, validating, updating, and redeploying them at operational speed.
-
-This repository is built from the Doctor Bones project template: a lightweight, vendor-independent discipline layer for AI-assisted development. In this project, Doctor Bones provides the repo-native memory, workorder, verification, and boundary structure used to develop MissionAiry without losing intent, constraints, checks, or project history.
-
-
+As in prior eras of rapid industrial mobilization, the limiting factor is not invention alone. The nation needs disciplined processes for understanding, validating, updating, and fielding new capabilities at operational speed.
 
 
 ## How to interact with this github repository
