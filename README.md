@@ -22,6 +22,10 @@ MissionAiry treats defense as an adaptive mission posture, not a static shield. 
 
 The strategic problem is deterrence. Nuclear weapons deter nuclear weapons because the cost of use is unmistakably reciprocal. Drones do not yet face an equivalent defensive economy. Until defenders can impose low-cost, reliable, scalable, and accountable drone-on-drone or agent-on-agent defense, autonomous offense will continue to punch above its weight against critical infrastructure.
 
+Defense is the long-term mission under emergence. Offensive autonomy can be episodic, but defensive autonomy must persist: watching, adapting, coordinating, absorbing shocks, restoring function, preserving authority, and maintaining trust while threats, technologies, infrastructure, and human conditions change around it.
+
+MissionAiry treats defense as a living mission posture rather than a fixed shield. The purpose is to help authorities and operators continuously integrate new sensors, observers, communications paths, autonomous agents, emergency procedures, evidence flows, and mission updates without losing intent, accountability, escalation control, or public trust.
+
 
 ## Critical Infrastructure and HAM/RACES
 
