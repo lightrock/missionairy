@@ -6,7 +6,7 @@ Think of the history of war, there is a hierarchical structure of military comma
 
 ## This is not right in the modern world
 
-Ender Wiggin was a single point of failure. Hierarchical command structure is for humans because not everyone can be taught to be a soldier and a general.
+Ender Wiggin was a single point of failure. Hierarchical command structure is for humans because not everyone can be taught to be a soldier and a general and to perform in both of those roles at the same time.
 
 The modern landscape is different. AI Systems "have an app for that".  "Today I am a commander, or a relay, or a package delivery vehicle."  "Later today I gave myself my own battlefield promotion, and in order to achieve my mission I need at least four participants with the following capabilities..."
 
