@@ -24,7 +24,7 @@ Ender Wiggin was a single point of failure. Hierarchical command structure is fo
 
 The modern landscape is different. AI Systems "have an app for that".  "Today I am a commander, or a relay, or a package delivery vehicle."  "Later today I gave myself my own battlefield promotion, and in order to achieve my mission I need at least four other participants..."
 
-This kind of resilience under expected heavy attrition is new.  The commander is now a fractal expression spread throughout the operational AI ecosystem. "I am the one who has discovered the best odds of success, 'You three! Follow me now...'"
+This kind of resilience under expected heavy attrition is new.  The commander is now a fractal expression spread throughout the operational AI ecosystem. "I am the one who has discovered the best odds of success with the highest confidence%, 'You three! Follow me now...'"
 
 
 
