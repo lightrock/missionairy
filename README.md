@@ -12,6 +12,20 @@ The same coordination required for human mission teams starting at the very top,
 
 As in prior eras of rapid industrial mobilization, the limiting factor is not invention alone. The nation needs disciplined processes for understanding, validating, updating, and fielding new capabilities at operational speed.
 
+# Cognitive Map
+
+Think of the book or movie Ender's Game. One commander in a centralized enviornment, supported by a team of geniuses, guides an offensive against a rapidly adapting enemy.
+
+Think of the history of war, there is a heirarchical structure of military command.
+
+## This is not right in the modern world
+
+Ender Wiggin was a single point of failure. Hierarchical command structure is for humans because not everyone can be taught to be a soldier and a general.
+
+The modern landscape is different. AI Systems "have an app for that".  "Today I am a commander, or a relay, or a package delivery vehicle."  "Later today I gave myself my own battlefield promotion, and in order to achieve my mission I need at least four other participants..."
+
+This kind of resilience under expected heavy attrition is new.  The commander is now a fractal expression spread throughout the operational AI ecosystem.
+
 
 
 ## How to interact with this github repository
