@@ -1,3 +1,5 @@
+# MissionAiry Architecture Reasoning
+
 There are two main issues, Awareness and Intent. Everything else is either evolving at a pace that seems impossible to predict, or else already easily classifiable into known subsystems.
 
 The environment is pervasively Polycentric and Federated, starting all the way back at the industrial mobilization before there are even Missions to perform.
