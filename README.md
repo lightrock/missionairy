@@ -28,13 +28,13 @@ MissionAiry separates those layers:
 
 The drone does not need to digest a volume of English mission statement. The mission compiler does. The platform receives bounded task packages it can actually execute.
 
-## MissionAiry and DICE-Style TA1/TA2
+## MissionAiry mission state and control
 
 MissionAiry is not merely a simulation feature. It is the live mission-state substrate required before decentralized coordination or local control can work.
 
-**TA1-style coordination needs mission state.** Peer-to-peer coordination, distributed task planning, context fusion, consensus, reauctioning, recovery, and new-agent onboarding require a current mission object: available capabilities, task dependencies, energy state, communication paths, timing, losses, replacements, and authority constraints. Without that, agents are only passing messages in a vacuum.
+**Coordination needs mission state.** Peer-to-peer coordination, distributed task planning, context fusion, consensus, reauctioning, recovery, and new-agent onboarding require a current mission object: available capabilities, task dependencies, energy state, communication paths, timing, losses, replacements, and authority constraints. Without that, agents are only passing messages in a vacuum.
 
-**TA2-style control needs mission state.** Role coherence is not abstract obedience. A role is coherent only while the asset still has the energy, navigation confidence, sensor confidence, communications, timing, authority, and context needed to perform it. MissionAiry provides the role envelopes and validity thresholds that let local adaptors decide whether to continue, hand off, degrade, relay, return, abort, quarantine, or prune.
+**Control needs mission state.** Role coherence is not abstract obedience. A role is coherent only while the asset still has the energy, navigation confidence, sensor confidence, communications, timing, authority, and context needed to perform it. MissionAiry provides the role envelopes and validity thresholds that let local adaptors decide whether to continue, hand off, degrade, relay, return, abort, quarantine, or prune.
 
 In high-tempo contested missions, the collective cannot pause to adjudicate the cause of every failure. If an asset falls outside its valid role envelope, the mission system should prune it from the mission graph as operationally dead unless and until it reestablishes validity. TA1 rapidly routes around and reallocates its work. TA2 enforces the local role-validity envelope and authorized fallback behavior.
 
