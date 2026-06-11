@@ -41,15 +41,6 @@ Before the AI codes, teach the repo how to talk. Before the AI claims done, defi
 
 See [TODO.md](TODO.md) for the rough working list of what still needs to become repo files, schemas, rubrics, examples, checks, and integration targets.
 
-## Languages
-
-- English: this file
-- [Español](docs/i18n/README.es.md)
-- [Français](docs/i18n/README.fr.md)
-- [Deutsch](docs/i18n/README.de.md)
-- [Português do Brasil](docs/i18n/README.pt-BR.md)
-- [हिन्दी](docs/i18n/README.hi.md)
-
 ## What this repository is
 
 It is a repo-native discipline layer for using AI assistants and coding agents without losing intent, constraints, checks, or project history.
