@@ -1,3 +1,9 @@
+## Abstract
+[abstract.md](docs/abstract.md).
+
+## One pager
+[cognitive_map.md](docs/cognitive_map.md).
+
 # MissionAiry
 
 MissionAiry is a common mission operating environment for rapidly integrating, validating, updating, and redeploying emerging AI and autonomy capabilities while keeping mission surfaces human-comprehensible for authorities and operators.
