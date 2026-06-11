@@ -30,3 +30,37 @@ In MissionAiry terms, adapters should include at least these surfaces:
 - human legibility: operator-facing explanations of what the agent is doing, why it is doing it, what it needs, what it refuses to do, and what changed since the last version.
 
 This turns heterogeneous autonomous agents into mission participants rather than mysterious black boxes. The adapter is where capability, authority, evidence, safety, update state, and operator-facing intent meet.
+
+## Friction Diction as Industrial Learning Memory
+
+If the mission is staring at industrial mobilization, then Friction Diction is not merely a notes field or lessons-learned appendix. It is the continuous-improvement memory loop for rapid AI/autonomy mobilization.
+
+W. Edwards Deming-style quality discipline matters here because rapid mobilization cannot depend on heroic improvisation forever. The system has to learn from defects, variation, supplier quirks, handoff failures, field workarounds, operator pain, and recurring mission friction, then feed that learning back into production, validation, doctrine, adapters, and redeployment.
+
+In MissionAiry terms:
+
+```text
+PFEM tells the mission what it knows and how it knows it.
+PFCOMM tells the mission who must coordinate, clarify, remediate, and attest.
+Friction Diction tells the mission what reality keeps teaching the organization the hard way.
+```
+
+The learning loop is:
+
+```text
+field pain
+-> human-language friction capture
+-> structured friction pattern
+-> PFEM evidence and confidence
+-> PFCOMM handoff / clarification / remediation
+-> adapter requirement or validation check
+-> updated mission doctrine
+-> redeployed capability
+-> monitored for recurring friction
+```
+
+This matters before missions begin, during missions, and after missions. Under rapid emergence, the industrial base, vendor ecosystem, local operators, emergency communicators, autonomous agents, and authorities are all part of the same learning system.
+
+Friction Diction should therefore remain human-language-first. Preserve reality before designing automation. Capture how operators actually describe recurring pain, then turn that pain into governed memory, preventive checks, adapter requirements, validation gates, workorders, and doctrine.
+
+For MissionAiry, this is the Deming layer across the PF* system. It lets defensive posture improve without forcing every operator, vendor, authority, and AI assistant to rediscover the same hard lesson every week.
