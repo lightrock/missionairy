@@ -4,7 +4,7 @@ For the public introduction, see the [Doctor Bones GitHub Pages site](https://li
 
 This is an instance of a Doctor Bones github project template. Doctor Bones is an effective light-weight AI/LLM vendor-independent repository template for AI-assisted development.
 
-MissionAiry is a common mission operating environment for rapidly understanding, integrating, validating, updating, and redeploying newly emerged AI/autonomy capabilities while keeping the forward mission surfaces human-comprehensible.
+MissionAiry is a common mission operating environment for rapidly understanding, integrating, validating, updating, and redeploying newly emerged AI/autonomy capabilities while keeping the forward mission surfaces human-comprehensible with the ability to continuously control existing and newly emerged capabilities.
 
 ## More about the idea 
 
