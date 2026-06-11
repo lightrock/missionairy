@@ -49,10 +49,10 @@ There are existing good high level abstractions like "Polycentric Federated Evid
 The same thing as PFEM inverts to "Polycentric Federated Command Mesh" with the same principles applied to command and control and "hive mind" or resilient swarm-like systems.
 
 
+
 # Existing Landscape
-( link to PFS.md )
 
-
+See [current_landscape.md](docs/current_landscape.md).
 
 
 
