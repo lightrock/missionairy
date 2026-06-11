@@ -16,7 +16,7 @@ The same thing as PFEM inverts to "Polycentric Federated Command Mesh" with the 
 
 ## Capability Adapters, Not Just API Adapters
 
-DICE proposer-day language about adapters for drone AI agents should be understood broadly. A MissionAiry adapter is not merely a software plug-in for calling a drone API. It is a mission translation layer that makes a heterogeneous autonomous capability legible, testable, governable, and updateable inside a human-comprehensible mission environment.
+Adapters for drone AI agents should be understood broadly. A MissionAiry adapter is not merely a software plug-in for calling a drone API. It is a mission translation layer that makes a heterogeneous autonomous capability legible, testable, governable, and updateable inside a human-comprehensible mission environment.
 
 A capability adapter should expose what the agent can do, what it is allowed to do, how it communicates, how it is validated, how it reports uncertainty, how it can be updated or rolled back, and how authorities and operators can understand its current role in the mission.
 
