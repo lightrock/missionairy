@@ -12,19 +12,17 @@ As in prior eras of rapid industrial mobilization, the limiting factor is not in
 
 ## Cognitive Map
 
-How we think about all this
+Why centralized command breaks down when the mission ecosystem itself is rapidly changing.  
 See [cognitive_map.md](docs/cognitive_map.md).
-
 
 ## MissionAiry Architecture Reasoning
 
-How we think about the architecture(s)
+How MissionAiry preserves awareness, intent, and interoperability across polycentric human and autonomous mission systems.  
 See [architecture_reasoning.md](docs/architecture_reasoning.md).
-
 
 ## Current Landscape
 
-What is going on in the world in this regard
+Why rapid AI/autonomy industrialization changes the mission problem before the mission even begins.  
 See [current_landscape.md](docs/current_landscape.md).
 
 ---
