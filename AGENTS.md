@@ -22,7 +22,7 @@ Before making architecture claims or implementation decisions, read the smallest
 - `docs/abstract.md` for the compact DICE-oriented abstract.
 - `docs/onepager.md` for the one-page concept note.
 - `docs/cognitive_map.md` for the mental model.
-- `docs/architecture_reasoning.md` for architecture doctrine, including capability adapters.
+- `docs/architecture_reasoning.md` for architecture doctrine, including capability adapters and Friction Diction.
 - `docs/current_landscape.md` for the rapid-emergence landscape.
 - `TODO.md` for current work items.
 
@@ -48,6 +48,22 @@ MissionAiry adapters are capability adapters, not just API adapters. An adapter 
 - human legibility: what authorities and operators need to understand about its role, behavior, limits, and changes.
 
 Do not reduce adapters to vendor API wrappers. The adapter is where capability, authority, evidence, safety, update state, and operator-facing intent meet.
+
+## Friction Diction and Industrial Mobilization
+
+If the mission is staring at industrial mobilization, Friction Diction is not merely a notes field. It is the Deming-style operational learning memory for rapid AI/autonomy mobilization.
+
+Treat Friction Diction as the way MissionAiry captures what reality keeps teaching the organization the hard way: defects, variation, supplier quirks, field workarounds, fragile handoffs, operator pain, local exceptions, recurring mission friction, and lessons that should become doctrine, checks, adapter requirements, or workorders.
+
+Use this framing:
+
+```text
+PFEM tells the mission what it knows and how it knows it.
+PFCOMM tells the mission who must coordinate, clarify, remediate, and attest.
+Friction Diction tells the mission what reality keeps teaching the organization the hard way.
+```
+
+Preserve human language first. Do not prematurely formalize away operator reality. Capture pain as operators describe it, then convert that pain into governed memory, preventive checks, validation gates, adapter requirements, workorders, and doctrine.
 
 ## Foreground vs Executor Rule
 
@@ -79,6 +95,8 @@ A good first workorder should create schemas, examples, validation checks, and d
 
 Do not build UI first unless the human explicitly asks for UI. Establish the adapter model, example data, validation checks, and mission-legible documentation first.
 
+Include lightweight Friction Diction fields as part of the first substrate, but do not build a full Friction Diction system unless explicitly asked. Capture enough human-language operational friction to support future Deming-style learning loops.
+
 ## Routing Table
 
 Read the smallest relevant surface before acting:
@@ -86,7 +104,7 @@ Read the smallest relevant surface before acting:
 | Situation | Route |
 | --- | --- |
 | Project identity, public framing, DICE thesis | `README.md`, `docs/abstract.md`, `docs/onepager.md` |
-| Architecture doctrine, adapters, awareness, intent, polycentric federation | `docs/architecture_reasoning.md` |
+| Architecture doctrine, adapters, awareness, intent, polycentric federation, Friction Diction | `docs/architecture_reasoning.md` |
 | Conceptual framing and command model | `docs/cognitive_map.md` |
 | Current strategic/industrial landscape | `docs/current_landscape.md` |
 | Current task list | `TODO.md` |
