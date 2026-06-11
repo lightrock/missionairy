@@ -60,7 +60,7 @@ See [current_landscape.md](docs/current_landscape.md).
 
 MissionAiry treats continual process improvement as controlled emergence. The learning loop starts before the mission, at industrial mobilization, and continues through deployment, operation, assessment, update, and redeployment.
 
-This is where Friction Diction matters. Field pain, vendor quirks, fragile handoffs, operator workarounds, recurring defects, and local exceptions should not remain tribal memory. They should become governed mission memory: captured in human language, structured into reusable friction patterns, tied to evidence and communication flows, converted into adapter requirements or validation checks, and fed back into updated doctrine and redeployed capability.
+This is where Friction Diction (related project) matters. Field pain, vendor quirks, fragile handoffs, operator workarounds, recurring defects, and local exceptions should not remain tribal memory. They should become governed mission memory: captured in human language, structured into reusable friction patterns, tied to evidence and communication flows, converted into adapter requirements or validation checks, and fed back into updated doctrine and redeployed capability.
 
 In that sense, MissionAiry applies Deming-style quality discipline to AI/autonomy mobilization. The goal is not uncontrolled acceleration. The goal is to let the mission system learn quickly without losing authority, evidence, safety, operator trust, or human comprehension.
 
