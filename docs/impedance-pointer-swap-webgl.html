@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fundamental Pointer Swap</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #edf6f1;
+      --muted: #a9bbb8;
+      --line: rgba(190, 222, 216, 0.24);
+      --paper: #05080d;
+      --panel: rgba(9, 16, 24, 0.80);
+      --blue: #67a7ff;
+      --green: #55d29c;
+      --gold: #f1bd55;
+      --red: #ff6374;
+      --violet: #b790ff;
+      --white: #f4fbff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+
+    main {
+      min-height: 100vh;
+      display: block;
+    }
+
+    header {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      width: 380px;
+      padding: 22px 18px 12px;
+      background: linear-gradient(180deg, rgba(5, 8, 13, 0.98), rgba(5, 8, 13, 0.86));
+    }
+
+    a {
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    h1 {
+      max-width: 340px;
+      margin: 18px 0 0;
+      font-size: 30px;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .lede {
+      max-width: 340px;
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .stage {
+      position: relative;
+      min-height: 100vh;
+      margin-left: 380px;
+      overflow: hidden;
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100vh;
+      min-height: 100vh;
+      cursor: grab;
+      touch-action: none;
+    }
+
+    canvas:active {
+      cursor: grabbing;
+    }
+
+    .hud {
+      position: fixed;
+      left: 0;
+      top: 250px;
+      bottom: 0;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-content: start;
+      width: 380px;
+      gap: 10px;
+      padding: 0 18px 18px;
+      overflow-y: auto;
+      pointer-events: auto;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+      border-radius: 8px;
+      padding: 14px;
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.32);
+    }
+
+    .panel h2 {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.2;
+    }
+
+    .panel p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .readout {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .fact {
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .fact span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .fact strong {
+      display: block;
+      overflow: hidden;
+      margin-top: 4px;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 18px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .messages {
+      margin: 12px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 12px;
+    }
+
+    .messages li + li {
+      margin-top: 6px;
+    }
+
+    .legend {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .swatch {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-right: 8px;
+      border-radius: 50%;
+      vertical-align: -1px;
+    }
+
+    .controls {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .controls code {
+      color: var(--ink);
+    }
+
+    @media (max-width: 860px) {
+      header {
+        position: relative;
+        width: auto;
+        padding: 20px 16px 12px;
+      }
+
+      h1,
+      .lede {
+        max-width: none;
+      }
+
+      h1 {
+        font-size: 31px;
+      }
+
+      .stage {
+        min-height: 760px;
+        margin-left: 0;
+      }
+
+      canvas {
+        height: 760px;
+        min-height: 760px;
+      }
+
+      .hud {
+        position: relative;
+        top: auto;
+        bottom: auto;
+        width: auto;
+        padding: 12px 16px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="nav">
+        <a href="index.html">Back to docs index</a>
+        <a href="impedance-geometry-origin-webgl.html">Previous toy model</a>
+      </div>
+      <h1>Fundamental Pointer Swap</h1>
+      <p class="lede">
+        Ten Z0-running nodes maintain an entanglement basis through pointer
+        swaps. No nodes are lost; fuzzy and intractable do not mean wrong.
+      </p>
+    </header>
+
+    <section class="stage" aria-label="WebGL fundamental pointer swap simulation">
+      <canvas id="universe"></canvas>
+      <div class="hud">
+        <section class="panel">
+          <h2>Mechanism For Spatial Appearance</h2>
+          <p>
+            Spatial space is not used as a magic wand here. It is the visible
+            outcome of a conserved pointer network: ten impedance nodes swap
+            references, preserve identity, and render geometry from relation.
+          </p>
+          <div class="readout">
+            <div class="fact"><span>now</span><strong id="nowTick">0</strong></div>
+            <div class="fact"><span>nodes</span><strong id="nodes">10/10</strong></div>
+            <div class="fact"><span>swaps</span><strong id="swaps">0</strong></div>
+            <div class="fact"><span>basis</span><strong id="basis">0.00</strong></div>
+            <div class="fact"><span>fuzz</span><strong id="fuzz">0.00</strong></div>
+            <div class="fact"><span>lost</span><strong id="lost">0</strong></div>
+          </div>
+          <ul class="messages" id="messages"></ul>
+          <div class="controls">
+            <div><code>drag</code> rotate / tilt</div>
+            <div><code>shift-drag</code> or <code>right-drag</code> pan</div>
+            <div><code>wheel</code> zoom</div>
+          </div>
+        </section>
+
+        <aside class="panel">
+          <h2>Reading The Scene</h2>
+          <div class="legend">
+            <div><span class="swatch" style="background: var(--blue)"></span>Ten nodes: conserved impedance identities</div>
+            <div><span class="swatch" style="background: var(--gold)"></span>Gold lines: active pointer references</div>
+            <div><span class="swatch" style="background: var(--violet)"></span>Violet arcs: pointer swaps in flight</div>
+            <div><span class="swatch" style="background: var(--green)"></span>Fuzzy halos: intractable relation, not error</div>
+            <div><span class="swatch" style="background: var(--white)"></span>White cores: no lost nodes</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    "use strict";
+
+    const Z0_BITS = "101011110110110111000000110001011110101";
+    const canvas = document.getElementById("universe");
+    const gl = canvas.getContext("webgl", { antialias: true, alpha: false });
+    const readouts = {
+      now: document.getElementById("nowTick"),
+      nodes: document.getElementById("nodes"),
+      swaps: document.getElementById("swaps"),
+      basis: document.getElementById("basis"),
+      fuzz: document.getElementById("fuzz"),
+      lost: document.getElementById("lost"),
+      messages: document.getElementById("messages")
+    };
+
+    if (!gl) {
+      canvas.replaceWith(document.createTextNode("WebGL is not available in this browser."));
+      throw new Error("WebGL unavailable");
+    }
+
+    const vertexSource = `
+      attribute vec2 a_position;
+      attribute vec3 a_color;
+      attribute float a_size;
+      varying vec3 v_color;
+      void main() {
+        gl_Position = vec4(a_position, 0.0, 1.0);
+        gl_PointSize = a_size;
+        v_color = a_color;
+      }
+    `;
+
+    const fragmentSource = `
+      precision mediump float;
+      varying vec3 v_color;
+      void main() {
+        vec2 p = gl_PointCoord - vec2(0.5);
+        float d = length(p);
+        float alpha = smoothstep(0.5, 0.07, d);
+        gl_FragColor = vec4(v_color * (1.0 + alpha * 0.55), alpha);
+      }
+    `;
+
+    function shader(type, source) {
+      const result = gl.createShader(type);
+      gl.shaderSource(result, source);
+      gl.compileShader(result);
+      if (!gl.getShaderParameter(result, gl.COMPILE_STATUS)) {
+        throw new Error(gl.getShaderInfoLog(result));
+      }
+      return result;
+    }
+
+    const program = gl.createProgram();
+    gl.attachShader(program, shader(gl.VERTEX_SHADER, vertexSource));
+    gl.attachShader(program, shader(gl.FRAGMENT_SHADER, fragmentSource));
+    gl.linkProgram(program);
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+      throw new Error(gl.getProgramInfoLog(program));
+    }
+    gl.useProgram(program);
+
+    const positionBuffer = gl.createBuffer();
+    const colorBuffer = gl.createBuffer();
+    const sizeBuffer = gl.createBuffer();
+    const positionLocation = gl.getAttribLocation(program, "a_position");
+    const colorLocation = gl.getAttribLocation(program, "a_color");
+    const sizeLocation = gl.getAttribLocation(program, "a_size");
+
+    function enableBuffer(buffer, location, size) {
+      gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+      gl.enableVertexAttribArray(location);
+      gl.vertexAttribPointer(location, size, gl.FLOAT, false, 0, 0);
+    }
+
+    function xorStep(bits) {
+      let next = "";
+      for (let i = 0; i < bits.length; i += 1) {
+        next += bits[i] === bits[(i + 1) % bits.length] ? "0" : "1";
+      }
+      return next;
+    }
+
+    function rotateBits(bits, count) {
+      const n = ((count % bits.length) + bits.length) % bits.length;
+      return bits.slice(n) + bits.slice(0, n);
+    }
+
+    function invert(bits) {
+      return bits.split("").map((bit) => bit === "1" ? "0" : "1").join("");
+    }
+
+    function rotate3(point, yaw, pitch, roll) {
+      let [x, y, z] = point;
+      const cy = Math.cos(yaw);
+      const sy = Math.sin(yaw);
+      const cp = Math.cos(pitch);
+      const sp = Math.sin(pitch);
+      const cr = Math.cos(roll);
+      const sr = Math.sin(roll);
+
+      let x1 = x * cy + z * sy;
+      let y1 = y;
+      let z1 = -x * sy + z * cy;
+      let x2 = x1;
+      let y2 = y1 * cp - z1 * sp;
+      let z2 = y1 * sp + z1 * cp;
+      return [x2 * cr - y2 * sr, x2 * sr + y2 * cr, z2];
+    }
+
+    function project(point, camera) {
+      const rotated = rotate3(point, camera.yaw, camera.pitch, camera.roll);
+      const depth = camera.zoom / (camera.zoom + rotated[2] + 2.8);
+      return {
+        x: rotated[0] * depth + camera.panX,
+        y: rotated[1] * depth + camera.panY,
+        z: rotated[2],
+        depth
+      };
+    }
+
+    function pushPoint(points, colors, sizes, projected, color, size) {
+      points.push(projected.x, projected.y);
+      colors.push(color[0], color[1], color[2]);
+      sizes.push(size * Math.max(0.48, projected.depth));
+    }
+
+    function lerp3(a, b, t) {
+      return [
+        a[0] + (b[0] - a[0]) * t,
+        a[1] + (b[1] - a[1]) * t,
+        a[2] + (b[2] - a[2]) * t
+      ];
+    }
+
+    const controls = {
+      pointerDown: false,
+      mode: "rotate",
+      lastX: 0,
+      lastY: 0,
+      yaw: 0,
+      pitch: 0,
+      panX: 0,
+      panY: 0,
+      zoom: 1
+    };
+
+    canvas.addEventListener("contextmenu", (event) => event.preventDefault());
+    canvas.addEventListener("pointerdown", (event) => {
+      controls.pointerDown = true;
+      controls.mode = event.shiftKey || event.button === 2 ? "pan" : "rotate";
+      controls.lastX = event.clientX;
+      controls.lastY = event.clientY;
+      canvas.setPointerCapture(event.pointerId);
+    });
+    canvas.addEventListener("pointermove", (event) => {
+      if (!controls.pointerDown) return;
+      const dx = event.clientX - controls.lastX;
+      const dy = event.clientY - controls.lastY;
+      controls.lastX = event.clientX;
+      controls.lastY = event.clientY;
+      if (controls.mode === "pan" || event.shiftKey) {
+        controls.panX += dx / Math.max(540, canvas.clientWidth);
+        controls.panY -= dy / Math.max(540, canvas.clientHeight);
+        controls.panX = Math.max(-0.75, Math.min(0.75, controls.panX));
+        controls.panY = Math.max(-0.58, Math.min(0.58, controls.panY));
+      } else {
+        controls.yaw += dx * 0.006;
+        controls.pitch += dy * 0.005;
+        controls.pitch = Math.max(-1.25, Math.min(1.25, controls.pitch));
+      }
+    });
+    canvas.addEventListener("pointerup", (event) => {
+      controls.pointerDown = false;
+      if (canvas.hasPointerCapture(event.pointerId)) {
+        canvas.releasePointerCapture(event.pointerId);
+      }
+    });
+    canvas.addEventListener("pointercancel", () => {
+      controls.pointerDown = false;
+    });
+    canvas.addEventListener("wheel", (event) => {
+      event.preventDefault();
+      controls.zoom = Math.max(0.55, Math.min(2.35, controls.zoom + (event.deltaY > 0 ? -0.08 : 0.08)));
+    }, { passive: false });
+
+    const nodeColors = [
+      [0.42, 0.66, 1.0],
+      [0.30, 0.86, 0.58],
+      [1.0, 0.35, 0.44],
+      [0.95, 0.72, 0.28],
+      [0.72, 0.56, 1.0],
+      [0.48, 0.88, 0.92],
+      [1.0, 0.52, 0.78],
+      [0.72, 0.94, 0.42],
+      [0.98, 0.82, 0.48],
+      [0.62, 0.76, 1.0]
+    ];
+
+    const nodes = Array.from({ length: 10 }, (_unused, index) => {
+      const base = index % 2 === 0 ? Z0_BITS : invert(Z0_BITS);
+      return {
+        id: index,
+        bits: rotateBits(base, index * 4),
+        pointer: (index + 1) % 10,
+        previousPointer: (index + 1) % 10,
+        swapPhase: 0,
+        anchor: index / 10,
+        identity: `Z0-${index}`
+      };
+    });
+
+    const swapArcs = [];
+    let tick = 0;
+    let lastStep = 0;
+    let swapCount = 0;
+    let basisScore = 0.55;
+    let fuzzScore = 0.25;
+    let logLines = [
+      "fundamental pointer swap: references move, nodes are not lost",
+      "intractable is not equal to wrong",
+      "space is rendered from relation, not assumed as a wand"
+    ];
+
+    function targetPosition(index, beat) {
+      const angle = (index / 10) * Math.PI * 2 + beat * 0.18;
+      const second = (index * 3 % 10) / 10 * Math.PI * 2 - beat * 0.11;
+      const radius = 0.74 + Math.sin(beat * 0.8 + index) * 0.055;
+      return [
+        Math.cos(angle) * radius + Math.cos(second) * 0.16,
+        Math.sin(angle) * 0.40 + Math.sin(second) * 0.14,
+        Math.sin(angle) * 0.58 + Math.cos(second) * 0.18
+      ];
+    }
+
+    function simulationStep() {
+      tick += 1;
+      nodes.forEach((node) => {
+        node.bits = xorStep(node.bits);
+        node.swapPhase = Math.max(0, node.swapPhase - 0.055);
+      });
+
+      const a = tick % 10;
+      const b = (tick * 3 + 4) % 10;
+      if (tick % 7 === 0 && a !== b) {
+        const pa = nodes[a].pointer;
+        const pb = nodes[b].pointer;
+        nodes[a].previousPointer = pa;
+        nodes[b].previousPointer = pb;
+        nodes[a].pointer = pb;
+        nodes[b].pointer = pa;
+        nodes[a].swapPhase = 1;
+        nodes[b].swapPhase = 1;
+        swapCount += 1;
+        swapArcs.push({ a, b, life: 1 });
+      }
+
+      const uniqueIds = new Set(nodes.map((node) => node.id)).size;
+      const uniquePointers = new Set(nodes.map((node) => node.pointer)).size;
+      const noLostNodes = uniqueIds === 10;
+      basisScore = basisScore * 0.94 + (uniquePointers / 10) * 0.06;
+      fuzzScore = fuzzScore * 0.92 + Math.abs(Math.sin(tick * 0.047)) * 0.08;
+
+      if (tick % 9 === 0) {
+        const line = noLostNodes
+          ? "no lost nodes: identity survives pointer motion"
+          : "warning: basis identity collapse detected";
+        logLines = [line, ...logLines].slice(0, 5);
+      }
+      if (tick % 17 === 0) {
+        logLines = ["fuzzy/intractable: unresolved does not mean false", ...logLines].slice(0, 5);
+      }
+    }
+
+    function renderScene(time) {
+      if (time - lastStep > 82) {
+        simulationStep();
+        lastStep = time;
+      }
+
+      const width = canvas.clientWidth;
+      const height = canvas.clientHeight;
+      const ratio = Math.min(window.devicePixelRatio || 1, 2);
+      if (canvas.width !== Math.floor(width * ratio) || canvas.height !== Math.floor(height * ratio)) {
+        canvas.width = Math.floor(width * ratio);
+        canvas.height = Math.floor(height * ratio);
+        gl.viewport(0, 0, canvas.width, canvas.height);
+      }
+
+      gl.clearColor(0.014, 0.024, 0.040, 1);
+      gl.clear(gl.COLOR_BUFFER_BIT);
+      gl.enable(gl.BLEND);
+      gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
+
+      const points = [];
+      const colors = [];
+      const sizes = [];
+      const beat = time * 0.001;
+      const camera = {
+        yaw: beat * 0.13 + controls.yaw,
+        pitch: Math.sin(beat * 0.21) * 0.30 + controls.pitch,
+        roll: Math.sin(beat * 0.12) * 0.10,
+        zoom: (2.9 + Math.sin(beat * 0.17) * 0.18) * controls.zoom,
+        panX: controls.panX,
+        panY: controls.panY
+      };
+      const positions = nodes.map((_node, index) => targetPosition(index, beat));
+
+      for (let i = 0; i < 180; i += 1) {
+        const a = i * 2.399 + beat * 0.05;
+        const r = 0.15 + (i % 19) * 0.005;
+        pushPoint(points, colors, sizes, project([Math.cos(a) * r, Math.sin(a * 0.7) * r, Math.sin(a) * r], camera), [0.06, 0.11, 0.18], 2);
+      }
+
+      nodes.forEach((node, index) => {
+        const start = positions[index];
+        const end = positions[node.pointer];
+        const previous = positions[node.previousPointer];
+        const blend = node.swapPhase;
+        const target = blend > 0 ? lerp3(end, previous, blend) : end;
+        for (let step = 0; step <= 24; step += 1) {
+          const t = step / 24;
+          const point = lerp3(start, target, t);
+          point[2] += Math.sin(t * Math.PI + beat + index) * (0.045 + fuzzScore * 0.05);
+          const color = blend > 0
+            ? [0.72, 0.56, 1.0]
+            : [0.95, 0.72, 0.28];
+          pushPoint(points, colors, sizes, project(point, camera), color, 3.6 + basisScore * 2.8);
+        }
+      });
+
+      swapArcs.forEach((arc) => {
+        arc.life -= 0.012;
+        const start = positions[arc.a];
+        const end = positions[arc.b];
+        for (let step = 0; step <= 18; step += 1) {
+          const t = step / 18;
+          const point = lerp3(start, end, t);
+          point[1] += Math.sin(t * Math.PI) * 0.34 * arc.life;
+          pushPoint(points, colors, sizes, project(point, camera), [0.72, 0.56, 1.0], 6.5 * arc.life);
+        }
+      });
+      for (let i = swapArcs.length - 1; i >= 0; i -= 1) {
+        if (swapArcs[i].life <= 0) swapArcs.splice(i, 1);
+      }
+
+      nodes.forEach((node, index) => {
+        const center = positions[index];
+        const centerProjected = project(center, camera);
+        pushPoint(points, colors, sizes, centerProjected, [0.96, 1.0, 1.0], 18 + node.swapPhase * 12);
+        pushPoint(points, colors, sizes, centerProjected, nodeColors[index], 10 + basisScore * 8);
+
+        for (let i = 0; i < node.bits.length; i += 1) {
+          const angle = (i / node.bits.length) * Math.PI * 2 + beat * (0.35 + index * 0.025);
+          const active = node.bits[i] === "1";
+          const radius = 0.075 + (active ? 0.025 : 0) + fuzzScore * 0.018;
+          const ringPoint = [
+            center[0] + Math.cos(angle) * radius,
+            center[1] + Math.sin(angle) * radius,
+            center[2] + Math.sin(angle + index) * 0.035
+          ];
+          const color = active ? nodeColors[index] : [0.18, 0.30, 0.44];
+          pushPoint(points, colors, sizes, project(ringPoint, camera), color, active ? 5.4 : 3.2);
+        }
+
+        for (let j = 0; j < 7; j += 1) {
+          const angle = (j / 7) * Math.PI * 2 - beat * 0.7;
+          const halo = [
+            center[0] + Math.cos(angle) * (0.13 + fuzzScore * 0.07),
+            center[1] + Math.sin(angle) * (0.08 + fuzzScore * 0.05),
+            center[2] + Math.sin(angle * 1.9) * 0.05
+          ];
+          pushPoint(points, colors, sizes, project(halo, camera), [0.30, 0.86, 0.58], 2.8 + fuzzScore * 3);
+        }
+      });
+
+      gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(points), gl.DYNAMIC_DRAW);
+      enableBuffer(positionBuffer, positionLocation, 2);
+      gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.DYNAMIC_DRAW);
+      enableBuffer(colorBuffer, colorLocation, 3);
+      gl.bindBuffer(gl.ARRAY_BUFFER, sizeBuffer);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(sizes), gl.DYNAMIC_DRAW);
+      enableBuffer(sizeBuffer, sizeLocation, 1);
+      gl.drawArrays(gl.POINTS, 0, points.length / 2);
+
+      readouts.now.textContent = String(tick);
+      readouts.nodes.textContent = "10/10";
+      readouts.swaps.textContent = String(swapCount);
+      readouts.basis.textContent = basisScore.toFixed(2);
+      readouts.fuzz.textContent = fuzzScore.toFixed(2);
+      readouts.lost.textContent = "0";
+      readouts.messages.innerHTML = logLines.map((line) => `<li>${line}</li>`).join("");
+
+      requestAnimationFrame(renderScene);
+    }
+
+    requestAnimationFrame(renderScene);
+  </script>
+</body>
+</html>
