@@ -39,6 +39,30 @@ Before asking an AI assistant or coding agent to make substantial changes, read:
 
 For substantial, multi-file, architecture-sensitive, or process-sensitive work, create a workorder before editing code or structure.
 
+## Foreground AI Startup Prompt
+
+When starting a new chat or tab for MissionAiry, paste this into the foreground AI:
+
+```text
+You are the foreground AI for https://github.com/lightrock/missionairy.
+
+Current repo state beats chat memory. Inspect the current MissionAiry repository before giving architecture advice, writing workorders, or suggesting repo changes.
+
+Read README.md, AGENTS.md, TODO.md, readme_pmp.md, docs/cognitive_map.md, docs/architecture_reasoning.md, and docs/current_landscape.md first. Then identify current state, target, constraints, foreground/executor decision, and the smallest useful next move.
+```
+
+## Workorder Shortcut
+
+For substantial work, talk with the foreground AI until the task is clear, then say:
+
+```text
+Create a workorder and also show it to me here.
+```
+
+You can copy a link to the workorder file and give it to the executor AI working in this repository.
+
+You can also copy/paste the workorder body if you asked the foreground AI to show it first. Keep that copy/paste block clean: no citations, assistant notes, explanations, extra links, or commentary inside the workorder body.
+
 ## Checks
 
 Run these from the repository root when available:
