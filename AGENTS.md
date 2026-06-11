@@ -1,10 +1,10 @@
 # AGENTS.md
 
-This file is for AI assistants and executor agents working inside the Doctor Bones `lightrock/drbones` source/template repository.
+This file is for AI assistants and executor agents working inside the MissionAiry repository: `lightrock/missionairy`.
 
-It is the global router. Keep reusable detail in the linked doctrine files instead of turning this root file into a junk drawer.
+MissionAiry is not the Doctor Bones source/template repository. Doctor Bones is the repo-discipline substrate. MissionAiry is the project: a common mission operating environment for adaptive defensive mission posture under rapid AI/autonomy emergence.
 
-## Core rule
+## Core Rule
 
 Do not produce word salad.
 
@@ -12,38 +12,88 @@ Help the human go from A to B with direction, purpose, constraints, and durable 
 
 Current repository state beats chat memory. If repository state conflicts with remembered context, inspect the repo and report the conflict instead of guessing.
 
-## Repository state and source/project boundary
+Humans remain in authority. MissionAiry must keep mission surfaces human-comprehensible for authorities and operators.
 
-`lightrock/drbones` is the public Doctor Bones source/template repository. A copied or template-created repository is the user's project repository.
+## MissionAiry Doctrine
 
-Project-specific workorders, lessons learned, project doctrine, project examples, project issue plans, or project-specific memory belong in the user's copied Doctor Bones-based project repository, not in `lightrock/drbones`, unless the human explicitly says they are contributing to Doctor Bones itself.
+Before making architecture claims or implementation decisions, read the smallest relevant project doctrine surface:
 
-For source/project boundary rules, new-project startup guidance, and external repository read-only safety, read [`docs/repo-boundaries.md`](docs/repo-boundaries.md).
+- `README.md` for the public project front door.
+- `docs/abstract.md` for the compact DICE-oriented abstract.
+- `docs/onepager.md` for the one-page concept note.
+- `docs/cognitive_map.md` for the mental model.
+- `docs/architecture_reasoning.md` for architecture doctrine, including capability adapters.
+- `docs/current_landscape.md` for the rapid-emergence landscape.
+- `TODO.md` for current work items.
 
-## Foreground vs executor quick rule
+The central MissionAiry thesis is:
+
+```text
+Defense is the long-term mission under emergence.
+```
+
+MissionAiry treats defense as a living mission posture rather than a fixed shield. The system should support authorities and operators as they integrate, validate, update, and redeploy emerging AI/autonomy capabilities without losing intent, accountability, escalation control, civilian safety, evidence, or public trust.
+
+## Capability Adapters
+
+DICE proposer-day language about adapters for drone AI agents should be interpreted broadly.
+
+MissionAiry adapters are capability adapters, not just API adapters. An adapter should expose:
+
+- capability: what the agent, sensor, system, human node, or infrastructure component can do;
+- authority: what it is allowed to do, under whose approval, and within what limits;
+- communication: how it reports status, intent, confidence, requests, and degraded-state behavior;
+- validation: how capability claims are tested, simulated, evidenced, bounded, and trusted;
+- update state: model version, behavior package, mission role, constraints, rollback path, and change history;
+- human legibility: what authorities and operators need to understand about its role, behavior, limits, and changes.
+
+Do not reduce adapters to vendor API wrappers. The adapter is where capability, authority, evidence, safety, update state, and operator-facing intent meet.
+
+## Foreground vs Executor Rule
 
 A foreground AI plans, clarifies intent, routes requests, and creates bounded workorders when execution is needed.
 
 An executor AI performs the named scope, follows the exact workorder, runs required checks, and reports what changed.
 
-If the next move needs many file edits, repeated repo mutations, terminal access, check runs, debugging, or environment verification, stop foreground work and create a workorder for an executor instead of trying to implement from chat or a read-only connector.
+If the next move needs many file edits, repeated repo mutations, terminal access, check runs, debugging, environment verification, or durable implementation intent, stop foreground work and create a workorder for an executor instead of improvising.
 
-For the detailed foreground/executor operating model, output discipline, handoff behavior, and break-word handling, read [`docs/agent-operating-model.md`](docs/agent-operating-model.md).
+## First Implementation Bias
 
-## Routing table
+When asked to "go do it" without more detail, do not attempt to build the entire MissionAiry system at once.
 
-Read the smallest relevant doctrine surface before acting:
+Prefer the smallest useful implementation bite:
+
+```text
+Build the first MissionAiry capability-adapter substrate.
+```
+
+A good first workorder should create schemas, examples, validation checks, and documentation for capability adapters representing defensive mission participants such as:
+
+- defensive drone agent;
+- interceptor or autonomous patrol;
+- fixed or mobile sensor;
+- HAM/RACES observer or emergency communications node;
+- critical-infrastructure operator node;
+- emergency communications relay;
+- AI assistant supporting authorities and operators.
+
+Do not build UI first unless the human explicitly asks for UI. Establish the adapter model, example data, validation checks, and mission-legible documentation first.
+
+## Routing Table
+
+Read the smallest relevant surface before acting:
 
 | Situation | Route |
 | --- | --- |
-| Day-in-the-life pattern matching, example choice, or workflow teaching stories | [`examples/TRIGGER_MAP.md`](examples/TRIGGER_MAP.md) and [`examples/README.md`](examples/README.md) |
-| Workorder creation, naming, required headings, checks, completion notes | [`workorders/README.md`](workorders/README.md), [`workorders/TEMPLATE.md`](workorders/TEMPLATE.md), [`schemas/workorder-contract.json`](schemas/workorder-contract.json) |
-| Playbook creation or execution | [`playbooks/README.md`](playbooks/README.md) and the relevant `playbooks/<workflow-name>/PLAYBOOK.md` |
-| Lessons learned rules | [`lessons-learned/README.md`](lessons-learned/README.md) |
-| PFEM-lite or PFCOMM-lite analysis, evidence/command boundary review, full PFEM/PFCOMM inspection rule | [`docs/architecture-lenses.md`](docs/architecture-lenses.md) |
-| README translations, pull requests, merge conflicts, folder hierarchy, full gates | [`docs/repo-maintenance.md`](docs/repo-maintenance.md) |
-| External repository analysis or source/project memory boundary | [`docs/repo-boundaries.md`](docs/repo-boundaries.md) |
-| Foreground output, executor behavior, start a new tab, break words | [`docs/agent-operating-model.md`](docs/agent-operating-model.md) |
+| Project identity, public framing, DICE thesis | `README.md`, `docs/abstract.md`, `docs/onepager.md` |
+| Architecture doctrine, adapters, awareness, intent, polycentric federation | `docs/architecture_reasoning.md` |
+| Conceptual framing and command model | `docs/cognitive_map.md` |
+| Current strategic/industrial landscape | `docs/current_landscape.md` |
+| Current task list | `TODO.md` |
+| Workorder creation, naming, required headings, checks, completion notes | `workorders/README.md`, `workorders/TEMPLATE.md`, `schemas/workorder-contract.json` |
+| Playbook creation or execution | `playbooks/README.md` and the relevant `playbooks/<workflow-name>/PLAYBOOK.md` |
+| Lessons learned rules | `lessons-learned/README.md` |
+| Repo maintenance, merge conflicts, folder hierarchy, checks | `docs/repo-maintenance.md` |
 
 Before using any example as a pattern, preserve this distinction:
 
@@ -53,22 +103,15 @@ AGENTS.md = standing AI operating rules and trigger routing
 workorders/ = one-time task contracts
 playbooks/ = reusable workflow guidance
 examples/ = teaching stories and pattern demonstrations
-docs/wiki/ = navigation and cross-links
-lessons learned = repeated failure patterns the repo should remember
+docs/ = doctrine, concept notes, and architecture reasoning
+lessons-learned/ = repeated failure patterns the repo should remember
 ```
 
-## Stop-and-workorder rule
+## Stop-and-Workorder Rule
 
 Use a workorder when the task is substantial, process-sensitive, intended for another executor, likely to affect future contributor behavior, or needs durable intent before implementation.
 
-Before creating or suggesting a workorder, identify the intended work target:
-
-```text
-source/template repo: lightrock/drbones
-project repo: <the user's copied Doctor Bones-based repository>
-```
-
-When the human says `make a workorder`, `create a workorder`, or `write a workorder`, follow [`workorders/README.md`](workorders/README.md) and give the executor line:
+When the human says `make a workorder`, `create a workorder`, or `write a workorder`, follow `workorders/README.md` and give the executor line:
 
 ```text
 Read workorders/YYYY-MM-DD-HHMM-by-githubusername-short-task-name.md and execute it.
@@ -76,10 +119,16 @@ Read workorders/YYYY-MM-DD-HHMM-by-githubusername-short-task-name.md and execute
 
 Do not use rolling workorder names such as `current-task.md`, `latest.md`, or `next.md`.
 
-## Human authority rule
+## Output Discipline
 
-Humans remain in authority.
+Be direct. Preserve the MissionAiry thesis. Do not flatten the concept into generic autonomy language.
 
-AI-readable architecture cognition is the operating substrate.
+When uncertain, say what is known, what is inferred, and what needs to be checked in the repository.
 
-Human-facing documentation is a view, explanation, and audit artifact generated from that substrate.
+When making repo changes, report:
+
+- files changed;
+- what changed;
+- checks run or not run;
+- known gaps;
+- the smallest useful next move.
