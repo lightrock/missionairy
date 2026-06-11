@@ -22,7 +22,7 @@ Think of the history of war, there is a heirarchical structure of military comma
 
 Ender Wiggin was a single point of failure. Hierarchical command structure is for humans because not everyone can be taught to be a soldier and a general.
 
-The modern landscape is different. AI Systems "have an app for that".  "Today I am a commander, or a relay, or a package delivery vehicle."  "Later today I gave myself my own battlefield promotion, and in order to achieve my mission I need at least four other participants..."
+The modern landscape is different. AI Systems "have an app for that".  "Today I am a commander, or a relay, or a package delivery vehicle."  "Later today I gave myself my own battlefield promotion, and in order to achieve my mission I need at least four participants with the following capabilities..."
 
 This kind of resilience under expected heavy attrition is new.  The commander is now a fractal expression spread throughout the operational AI ecosystem. "I am the one who has discovered the best odds of success with the highest confidence%, 'You three! Follow me now...'"
 
