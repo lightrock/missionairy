@@ -2,7 +2,7 @@
 [abstract.md](docs/abstract.md).
 
 ## One pager
-[cognitive_map.md](docs/cognitive_map.md).
+[onepager.md](docs/onepager.md).
 
 # MissionAiry
 
