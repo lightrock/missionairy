@@ -14,15 +14,15 @@ As in prior eras of rapid industrial mobilization, the limiting factor is not in
 
 ## Defensive Posture and the Economics of Autonomy
 
-MissionAiry is especially concerned with defensive posture under rapid autonomous emergence. Today, much of the attention goes to offensive drones because they are cheap, scalable, and visibly effective. In many cases, the best defense may still be offensive pressure against the enemy’s launch sites, supply chains, operators, and enabling infrastructure.
+Defense is the long-term mission under emergence. Offensive autonomy can be episodic, but defensive autonomy must persist: watching, adapting, coordinating, absorbing shocks, restoring function, preserving authority, and maintaining trust while threats, technologies, infrastructure, and human conditions change around it.
+
+Today, much of the attention goes to offensive drones because they are cheap, scalable, and visibly effective. In many cases, the best defense may still be offensive pressure against the enemy’s launch sites, supply chains, operators, and enabling infrastructure.
 
 But offense alone does not level the field. Critical infrastructure still has to be defended. Refineries, ports, pipelines, power systems, communications, logistics hubs, and emergency services cannot simply answer every drone with a missile or every swarm with a fixed defensive appliance. That preserves the attacker’s advantage: cheap systems forcing expensive, brittle, or delayed defensive responses.
 
 MissionAiry treats defense as an adaptive mission posture, not a static shield. The goal is to help authorities and operators coordinate sensors, observers, interceptors, autonomous patrols, emergency communications, evidence, rules of engagement, and updateable mission plans so defense can become cheaper, faster, more distributed, and more resilient.
 
 The strategic problem is deterrence. Nuclear weapons deter nuclear weapons because the cost of use is unmistakably reciprocal. Drones do not yet face an equivalent defensive economy. Until defenders can impose low-cost, reliable, scalable, and accountable drone-on-drone or agent-on-agent defense, autonomous offense will continue to punch above its weight against critical infrastructure.
-
-Defense is the long-term mission under emergence. Offensive autonomy can be episodic, but defensive autonomy must persist: watching, adapting, coordinating, absorbing shocks, restoring function, preserving authority, and maintaining trust while threats, technologies, infrastructure, and human conditions change around it.
 
 MissionAiry treats defense as a living mission posture rather than a fixed shield. The purpose is to help authorities and operators continuously integrate new sensors, observers, communications paths, autonomous agents, emergency procedures, evidence flows, and mission updates without losing intent, accountability, escalation control, or public trust.
 
