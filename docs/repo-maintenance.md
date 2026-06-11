@@ -2,6 +2,29 @@
 
 This doctrine file holds maintenance rules routed from root `AGENTS.md`.
 
+## Restore points
+
+When the human says "make a restore point", "create a restore point", "set a restore point", or similar before a repository change, create a real Git restore point before editing.
+
+A restore point means a branch or tag pointing to the current repository state before the requested mutation. It does not mean a note file, marker file, copied blob SHA, workorder, or verbal assurance that GitHub history can recover it.
+
+Default behavior:
+
+1. Inspect the current repository/default branch state.
+2. Create a branch before editing, named like:
+
+```text
+restore/before-YYYYMMDD-HHMM-short-task-name
+```
+
+3. Point that branch at the current HEAD commit before any requested changes.
+4. Report the branch name and commit SHA to the human.
+5. Only then perform the requested edit.
+
+If the tool cannot create the restore branch, stop and tell the human before making the risky change. Do not substitute a file in `restore_points/` unless the human explicitly asks for a file-based note.
+
+If a change has already been made and a restore point was forgotten, create the best available corrective restore branch immediately and state exactly what it points to. Do not claim it is equivalent to a true pre-change restore point unless it actually is.
+
 ## README and translations
 
 `README.md` is the canonical public template README.
