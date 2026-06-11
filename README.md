@@ -114,7 +114,7 @@ See [cognitive_map.md](docs/cognitive_map.md).
 How MissionAiry preserves awareness, intent, and interoperability across polycentric human and autonomous mission systems.  
 See [architecture_reasoning.md](docs/architecture_reasoning.md).
 
-## Current Landscape
+## Current Public Landscape
 
 Why rapid AI/autonomy industrialization changes the mission problem before the mission even begins.  
 See [current_landscape.md](docs/current_landscape.md).
