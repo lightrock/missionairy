@@ -28,7 +28,7 @@ This kind of resilience under expected heavy attrition is new.  The commander is
 
 To a degree this collapses many functions at once, command and control, intelligence and analysis, and critical mission updates on the fly. A learning and adapting hive mind would have beaten the pants off of Ender Wiggin, but his enemy was also hierarchical in structure.
 
-Imagie an operational set of AI's engaged in performance of a mission and along comes a "new guy". The new guy is aware that the other guys will not know the meaning of his new capabilities, he has to tell them "Trust me, put me here, and I will improve your chances".  Old systems will not always be able to understand the new guy who suddenly appeared into the collective, he has to be assertive. 
+Imagie an operational set of AI's engaged in performance of a mission and along comes a "new guy". The new guy is aware that the other guys will not know the meaning of his new capabilities, he may or may not have to tell them "Trust me, put me here, and I will improve your chances".  Old systems will not always be able to understand the capabilities of the new guy who suddenly appeared into the collective, he has to be assertive (if the others even need to know). 
 
 
 
