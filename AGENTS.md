@@ -53,7 +53,7 @@ Do not reduce adapters to vendor API wrappers. The adapter is where capability, 
 
 If the mission is staring at industrial mobilization, Friction Diction is not merely a notes field. It is the Deming-style operational learning memory for rapid AI/autonomy mobilization.
 
-Treat Friction Diction as the way MissionAiry captures what reality keeps teaching the organization the hard way: defects, variation, supplier quirks, field workarounds, fragile handoffs, operator pain, local exceptions, recurring mission friction, and lessons that should become doctrine, checks, adapter requirements, or workorders.
+Treat Friction Diction as the way MissionAiry captures what reality keeps teaching the organization the hard way: defects, variation, supplier quirks, field workarounds, fragile handoffs, operator pain, local exceptions, recurring mission friction, and lessons that should become doctrine, checks, adapter requirements, workorders, and doctrine.
 
 Use this framing:
 
@@ -138,6 +138,10 @@ When the human says `make a workorder`, `create a workorder`, or `write a workor
 ```text
 Read workorders/YYYY-MM-DD-HHMM-by-githubusername-short-task-name.md and execute it.
 ```
+
+Use the real filename.
+
+The executor line must be the only content inside its own fenced `text` code block in the chat response. Do not give executor handoff lines as inline code, prose sentences, or inside writing blocks. The standalone fenced block is required so the UI presents a copy control and the executor receives exactly one clean command.
 
 Do not use rolling workorder names such as `current-task.md`, `latest.md`, or `next.md`.
 
