@@ -26,3 +26,4 @@ If many lessons learned are being generated, treat that as a smoke signal that t
 ## Current lessons
 
 - [`connector-safe-fixtures.md`](connector-safe-fixtures.md) — keep test fixtures and examples semantically precise so repo writes do not trip connector safety filters or confuse future agents.
+- [`copyable-executor-lines.md`](copyable-executor-lines.md) — give workorder executor handoff commands as standalone fenced `text` code blocks so the human gets a clean copyable line.
