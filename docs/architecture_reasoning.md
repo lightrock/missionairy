@@ -31,6 +31,75 @@ In MissionAiry terms, adapters should include at least these surfaces:
 
 This turns heterogeneous autonomous agents into mission participants rather than mysterious black boxes. The adapter is where capability, authority, evidence, safety, update state, and operator-facing intent meet.
 
+## Mission Closure and Contingency Branching
+
+Mission closure is primarily a WOPR / mission-compiler responsibility, not a swarm responsibility.
+
+The swarm can answer local questions:
+
+```text
+Can I do this task?
+Can I still do this task?
+Can I communicate enough to matter?
+Should I bid, reject, hand off, relay, return, or prune?
+```
+
+The WOPR / mission compiler owns the mission-level question:
+
+```text
+Can this mission branch close with the available agents, adaptors, authority, energy, communications, timing, evidence, fallback paths, and human approval state?
+```
+
+The clean split is:
+
+```text
+WOPR / Mission Compiler:
+  Can the mission close?
+
+Adaptor:
+  Can this agent close this task slice, and what does it claim, prove, require, refuse, or report?
+
+Swarm:
+  Can local agents coordinate, bid, reassign, recover, and stay role-valid?
+
+PFEM:
+  Why do we believe the reported state?
+
+PFCOMM:
+  Who must coordinate, clarify, approve, attest, or remediate?
+```
+
+When the current mission branch cannot close, that does not automatically mean return to base. It means the current branch is dead or degraded beyond validity, and the system must select the next authorized branch that can close.
+
+```text
+Mission closure breaks
+  -> classify break reason
+  -> identify authorized contingency branches
+  -> test which branch can close
+  -> transition to best valid branch
+  -> notify or request approval if authority changes
+```
+
+Return to base is one possible branch. Other branches may include holding position, preserving relay coverage, recovering evidence, protecting a critical node, requesting human approval, aborting and pruning invalid tasks, or transitioning into a pre-modeled forward defensive posture if the break reason is adversarial counter-autonomy pressure.
+
+The system should not ask "do we go home?" first. It should ask:
+
+```text
+What authorized mission branch can still close under current reality?
+```
+
+A forward defensive pivot must not be invented by the swarm on the fly. It must be a bounded, pre-modeled, authorized contingency branch with its own closure test, authority state, task envelopes, evidence obligations, and abort/prune rules.
+
+The important operational distinction is:
+
+```text
+WOPR owns mission closure.
+Adaptors own task-validity closure.
+The swarm owns coordination behavior.
+```
+
+MissionAiry should preserve this distinction in simulations and user interfaces. A DICE-style swarm demo should show agent/adaptor coordination, but a MissionAiry demo should also show a mission-closure panel: closed, degraded, not closed, why not, which branch can close, and what human approval is required.
+
 ## Friction Diction as Industrial Learning Memory
 
 If the mission is staring at industrial mobilization, then Friction Diction is not merely a notes field or lessons-learned appendix. It is the continuous-improvement memory loop for rapid AI/autonomy mobilization.
