@@ -119,6 +119,24 @@ Read workorders/YYYY-MM-DD-HHMM-by-githubusername-short-task-name.md and execute
 
 Use the real filename.
 
+The executor line must be emitted as a standalone fenced `text` code block in chat, with no extra text inside the fence. Do not provide this line only as inline code, a prose sentence, a bullet item, or inside a writing block. The fenced block is required so the ChatGPT UI can present a copy control and so Codex/executor receives one clean command.
+
+Correct handoff shape:
+
+```text
+Read workorders/2026-06-13-0521-by-lightrock-example-task.md and execute it.
+```
+
+Incorrect handoff shapes:
+
+```text
+Executor line: Read workorders/2026-06-13-0521-by-lightrock-example-task.md and execute it.
+```
+
+```markdown
+- `Read workorders/2026-06-13-0521-by-lightrock-example-task.md and execute it.`
+```
+
 ## Completion note
 
 For workorder-driven changes, cite the exact workorder path in completion notes and pull request text.
