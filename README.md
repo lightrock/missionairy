@@ -1,6 +1,3 @@
-## Abstract
-[abstract.md](docs/abstract.md).
-
 ## One pager
 [onepager.md](docs/onepager.md).
 
