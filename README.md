@@ -1,6 +1,3 @@
-## One pager
-[onepager.md](docs/onepager.md).
-
 # MissionAiry
 
 MissionAiry is a **Live Mission Compiler** for rapidly integrating, validating, updating, and redeploying emerging AI and autonomy capabilities while keeping mission intent human-comprehensible for authorities and operators.
